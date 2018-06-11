@@ -36,3 +36,21 @@ const beyond = function(num)
 }
 
 beyond();
+
+//4. Crack the code
+
+const decode = function(encodedWord) {
+    if (encodedWord[0] === 'a') {
+        return encodedWord[1];
+    } else if (encodedWord[0] === 'b') {
+        return encodedWord[2];
+    } else if (encodedWord[0] === 'c') {
+        return encodedWord[3];
+    } else if (encodedWord[0] === 'd') {
+        return encodedWord[4];
+    } else {
+        return ' ';
+    }
+}
+
+console.log(decode('craft') + decode('block') + decode('argon') + decode('meter') + decode('bells') + decode('brown') + decode('croon') + decode('droop'));

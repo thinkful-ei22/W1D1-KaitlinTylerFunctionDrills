@@ -22,13 +22,19 @@ const yearOfBirth = function(age) {
 
 const whoAmI = function(name,age) {
     var yob = yearOfBirth(age);
-    if (name !== undefined && age !== undefined)
-    {
-        console.log('Hi, my name is Chris and I\'m 29 years old');
-        console.log(`I was born in ${yob}.`);
-    }
-    else{
-        console.error('Arguments not valid');
+    if (isNaN(age)) {
+        console.error('Age must be a number');
+    } else if(typeof name !== 'string') {
+        console.error('Name must be a string');
+    } else {
+        if (name !== undefined && age !== undefined)
+        {
+            console.log(`Hi, my name is ${name} and I\'m ${age} years old.`);
+            console.log(`I was born in ${yob}.`);
+        }
+        else{
+            console.error('Arguments not valid');
+        }
     }
 }
-whoAmI('Chris', '29');
+whoAmI('Amanda', 19);

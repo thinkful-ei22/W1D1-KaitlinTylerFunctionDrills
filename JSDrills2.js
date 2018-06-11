@@ -93,11 +93,36 @@ const daysInMonth = function(month, leapYear )
         return 'Must provide valid month';
         break;
 
-
-
-
     }
-
 }
 
 console.log(daysInMonth(''));
+
+
+//*6. Rock Paper Scissors*//
+
+const rpsGame = function(num) {
+    const randomNo = Math.floor(Math.random() * 3) + 1;
+    if (randomNo === 1 && num === 2 ) {
+        return 'You win!';
+    } else if (randomNo === 1 && num === 3) {
+        return 'Computer wins!';
+    } else if (randomNo === 2 && num === 3) {
+        return 'You win!';
+    } else if (randomNo === 2 && num === 1) {
+        return 'Computer wins!';
+    } else if (randomNo === 3 && num === 1) {
+        return 'You win!';
+    } else if (randomNo === 3 && num === 2) {
+        return 'Computer wins!';
+    } else if (num < 1 || num > 3) {
+        throw 'Number must be 1, 2, or 3!';
+    }
+}
+
+console.log(rpsGame(3));
+
+
+//*1 = rock*//
+//*2 = paper*//
+//*3 = scissors*//

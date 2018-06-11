@@ -54,3 +54,50 @@ const decode = function(encodedWord) {
 }
 
 console.log(decode('craft') + decode('block') + decode('argon') + decode('meter') + decode('bells') + decode('brown') + decode('croon') + decode('droop'));
+
+//5. How many days in a month
+
+const daysInMonth = function(month, leapYear )
+{
+    
+    switch(month)
+    {
+        case 'January':
+        case 'March':
+        case 'May':
+        case 'July':
+        case 'August':
+        case 'October':
+        case 'December':
+        return `${month} has 31 days`;
+        break;
+
+        case 'April':
+        case 'June':
+        case 'September':
+        case 'November':
+        return `${month} has 30 days`;
+        break;
+
+        case 'February':
+        if(leapYear === true){
+
+            return `${month} has 29 days`;
+            break;
+        }
+        else{
+            return `${month} has 28 days`;
+            break;
+        }
+        default:
+        return 'Must provide valid month';
+        break;
+
+
+
+
+    }
+
+}
+
+console.log(daysInMonth(''));
